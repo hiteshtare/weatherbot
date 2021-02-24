@@ -65,8 +65,8 @@ export class WeatherBot {
         },
         {
           "type": "TextBlock",
-          // "text": `${this.formatDateForCard('')}`,
-          "text": `Feb 24, 2021`,
+          "text": `${await this.formatDateForCard()}`,
+          // "text": `Feb 24, 2021`,
           "spacing": "None",
           "wrap": true
         },
@@ -156,9 +156,9 @@ export class WeatherBot {
       });
   }
 
-  async formatDateForCard(date: string) {
+  async formatDateForCard(): Promise<string> {
     try {
-      return moment(date).format("MMM DD, YYYY").toString();
+      return moment().format("ddd MMM DD, YYYY hh:mm A").toString();
     } catch (err) {
       this._logger.error(err);
       return '';
