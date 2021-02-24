@@ -1,0 +1,18 @@
+{
+    "name": "WeatherBot",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "",
+            "appPassword": "",
+            "endpoint": "http://localhost:3977/api/messages",
+            "id": "47a50900-7688-11eb-9ec1-ab411b172459",
+            "name": "http://localhost:3977/api/messages"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0",
+    "overrides": null,
+    "path": "/home/hiteshtare/Documents/Work/Tech/Bot/weatherbot/WeatherBot.bot"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "weatherbot",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "build": "tsc -p tsconfig.json",
+    "watch": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiteshtare/weatherbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hiteshtare/weatherbot/issues"
+  },
+  "homepage": "https://github.com/hiteshtare/weatherbot#readme",
+  "dependencies": {
+    "botbuilder": "^4.11.1",
+    "log4js": "^6.3.0",
+    "restify": "^8.5.1",
+    "typescript": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/restify": "^8.5.0"
+  }
+}
