@@ -54,7 +54,7 @@ export class WeatherBot {
       "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
       "type": "AdaptiveCard",
       "version": "1.0",
-      "speak": `<s>The forecast for ${fetchedWeatherDetails.name} November 5 is ${fetchedWeatherDetails.weather[0].description} with a High of ${fetchedWeatherDetails.main.temp_max} degrees and Low of ${fetchedWeatherDetails.main.temp_min} degrees</s>`,
+      "speak": `<s>The forecast for ${fetchedWeatherDetails.name} November 5 is ${fetchedWeatherDetails.weather[0].description} with a High of ${Math.round(+fetchedWeatherDetails.main.temp_max)} degrees and Low of ${Math.round(+fetchedWeatherDetails.main.temp_min)} degrees</s>`,
       "body": [
         {
           "type": "TextBlock",
@@ -116,12 +116,12 @@ export class WeatherBot {
               "items": [
                 {
                   "type": "TextBlock",
-                  "text": `Hi ${fetchedWeatherDetails.main.temp_max}`,
+                  "text": `Hi ${Math.round(+fetchedWeatherDetails.main.temp_max)}`,
                   "wrap": true
                 },
                 {
                   "type": "TextBlock",
-                  "text": `Lo ${fetchedWeatherDetails.main.temp_min}`,
+                  "text": `Lo ${Math.round(+fetchedWeatherDetails.main.temp_min)}`,
                   "spacing": "None",
                   "wrap": true
                 }
